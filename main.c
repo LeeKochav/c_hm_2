@@ -9,8 +9,8 @@ char action;
 while(action!='E')
 {
     printf("Transaction type? ");
-    scanf(" %c",&action);
-
+    if(scanf(" %c",&action)==1)
+    {
     switch (action)
     {
     case 'O':
@@ -83,6 +83,7 @@ while(action!='E')
     default:
         printf("Error, please try again \n");
         break;
+        }
     }    
 }
 

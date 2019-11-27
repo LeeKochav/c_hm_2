@@ -1,3 +1,4 @@
+double convert(double number);
 void openAccount(double amount);
 void balance(int account_number);
 void deposite(int account_number,double amount);

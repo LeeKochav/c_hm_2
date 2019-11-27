@@ -21,6 +21,7 @@ while(action!='E')
             printf("Invalid input \n");
             break;
         }
+        amount=convert(amount);
         openAccount(amount);
         break;
     case 'B':
@@ -42,6 +43,7 @@ while(action!='E')
              printf("Invalid input \n");
              break;
         }
+        amount1=convert(amount1);
         deposite(account_number1,amount1);
         break;
     case 'W':
@@ -53,6 +55,7 @@ while(action!='E')
              printf("Invalid input \n");
              break;
         }
+        amount2=convert(amount2);
         withdrawal(account_number2,amount2);
         break;
     case 'C':

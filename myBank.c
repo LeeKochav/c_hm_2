@@ -138,12 +138,14 @@ void addInterest(double interest_rate)
         return;
     }
     double interest_rate_calc=(interest_rate)/100+1;
-
+    double tmp=0;
     for(int i=0; i<ROWS; i++)
     {
         if(accounts[i][STATUS]==1)
         {
-            accounts[i][STATUS+1]*=interest_rate_calc;
+            tmp=accounts[i][STATUS+1]*interest_rate_calc;
+            tmp=convert(tmp);
+            accounts[i][STATUS+1]=tmp;
         }
     }
 
@@ -168,5 +170,13 @@ void closeAndExit()
         accounts[i][STATUS+1]=0;
         accounts[i][STATUS]=0;
     }
+    printf("All accounts have been closed, bye bye");
+}
+
+double convert(double number)
+{
+    double convNum=(int)(number*100);
+    double tmp=(convNum/100);
+    return tmp;
 }
 
